@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">03/04/2017 14:22:43</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">03/04/2017 14:22:43</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">cem</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Difficulty:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Priority:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Multiplicity:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{A355B326-87D5-4c6a-A2D7-25124B41ACA8}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA3541.htm">1c-IEHM</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">SELECT DISTINCT TESP_TAXON_COLECCIONES.IDCOLECCION, T.TAXONID, T.SCIENTIFICNAME, &lt;br/&gt;&#160; V.VERNACULARNAME,&lt;br/&gt;&#160; V.IDLANGUAGE,&lt;br/&gt;&#160; T.HIGHERCLASSIFICATION,&lt;br/&gt;&#160; SYS.DBMS_LOB.SUBSTR(T.TAXONREMARKS, 4000, 1) DESCR_DISTR_MUNDIAL, &lt;br/&gt;(SELECT K.SCIENTIFICNAME&#160; FROM TESP_TAXON K WHERE&#160;&#160; K.TAXONID = T.IDKINGDOM) AS REINO,&lt;br/&gt;(SELECT P.SCIENTIFICNAME&#160; FROM TESP_TAXON P WHERE&#160;&#160; P.TAXONID = T.IDPHYLUM) AS FILO,&lt;br/&gt;(SELECT C.SCIENTIFICNAME&#160; FROM TESP_TAXON C WHERE&#160;&#160; C.TAXONID = T.IDCLASS) AS CLASE,&lt;br/&gt;(SELECT O.SCIENTIFICNAME&#160; FROM TESP_TAXON O WHERE&#160;&#160; O.TAXONID = T.IDORDER) AS ORDEN,&lt;br/&gt;(SELECT F.SCIENTIFICNAME&#160; FROM TESP_TAXON F WHERE&#160;&#160; F.TAXONID = T.IDFAMILY) AS FAMILIA,&lt;br/&gt;(SELECT G.SCIENTIFICNAME&#160; FROM TESP_TAXON G WHERE&#160;&#160; G.TAXONID = T.IDGENUS) AS GENERO,&lt;br/&gt;(SELECT S.SCIENTIFICNAME&#160; FROM TESP_TAXON S WHERE&#160;&#160; S.TAXONID = T.IDSUBGENUS) AS SUBGENRO,&lt;br/&gt;(SELECT W.SCIENTIFICNAME&#160; FROM TESP_TAXON W WHERE&#160;&#160; W.TAXONID = T.IDSPECIFICEPITHET) AS SPECIFICEPITHET,&lt;br/&gt;(SELECT I.SCIENTIFICNAME&#160; FROM TESP_TAXON I WHERE&#160;&#160; I.TAXONID = T.IDINFRASPECIFICEPITHET) AS INFRASPECIFICEPITHET,&lt;br/&gt;T.TAXONCONCEPTID, &lt;br/&gt;SYS.DBMS_LOB.SUBSTR(T.NAMEACCORDINGTO, 4000, 1) AS NAMEACCORDINGTO,&lt;br/&gt;SYS.DBMS_LOB.SUBSTR(T.NAMEPUBLISHEDIN, 4000, 1) AS NAMEPUBLISHEDIN,&lt;br/&gt;T.NAMEPUBLISHEDINYEAR,&lt;br/&gt;T.HIGHERCLASSIFICATION,&lt;br/&gt;K.TAXONRANK,&lt;br/&gt;T.SCIENTIFICNAMEAUTHORSHIP,&lt;br/&gt;SYS.DBMS_LOB.SUBSTR(T.TAXONREMARKS, 4000, 1) AS TAXONREMARKS,&lt;br/&gt;T.MODIFIED, T.EUNIS_CODE, T.CITES_CODE, T.REDNATURA_CODE, T.COD_AMBITO,&lt;br/&gt;TESP_COLECCIONES.COLECCION,&lt;br/&gt;SYS.DBMS_LOB.SUBSTR(M.MEASUREMENTVALUE, 4, 1) AS COD_HABITAT&lt;br/&gt;&lt;br/&gt;FROM TESP_TAXON T &lt;br/&gt;&#160; INNER JOIN TESP_TAXON_COLECCIONES&#160; ON T.TaxonID = TESP_TAXON_COLECCIONES.TAXONID&lt;br/&gt;&#160; INNER JOIN TESP_COLECCIONES ON TESP_TAXON_COLECCIONES.IDCOLECCION = TESP_COLECCIONES.IDCOLECCION&lt;br/&gt;&#160; INNER JOIN TESP_T_TAXONRANK&#160; K&#160; ON K.IDTAXONRANK = T.IDTAXONRANK&lt;br/&gt;&#160; INNER JOIN TESP_DWCMEASUREMENTORFACT&#160; M&#160; ON M.TAXONID = T.TAXONID&lt;br/&gt;&#160; LEFT JOIN TESP_TAXON_TIENE_VERNACULAR R ON T.TAXONID = R.TAXONID &lt;br/&gt;&#160; LEFT JOIN TESP_VERNACULARNAME V ON R.IDVERNACULARNAME = V.IDVERNACULARNAME&lt;br/&gt;WHERE&#160; TESP_TAXON_COLECCIONES.IDCOLECCION = 15 AND T.IDGENUS IS NOT NULL&#160; &lt;br/&gt;&#160; AND M.IDMEASUREMENTMETHOD = 11 AND V.IDLANGUAGE = 1&lt;br/&gt;ORDER BY T.SCIENTIFICNAME;&lt;br/&gt;&lt;p/&gt;</div>
+
+<div class="pageFooter"></div>
+ 
+</body>
+</html>
