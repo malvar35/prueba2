@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>  : Public   Note</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">24/03/2017 16:25:04</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">24/03/2017 16:25:04</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">adiaz22</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Difficulty:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Priority:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Multiplicity:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{153F9CBA-5E5C-4f8c-9CCA-D5D8CFDC3CD7}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA4059.htm">2c-LESPE </a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">&lt;b&gt;VISTA: V_LESPE_EstraPlan&lt;/b&gt;&lt;br/&gt;&lt;b&gt;&lt;br/&gt;&lt;/b&gt;SELECT DISTINCT&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;M.IDCOLECCION,&lt;br/&gt;&#160; L.IDPROTECTIONLEGALSTATUS,&lt;br/&gt;&#160; T.SCIENTIFICNAME,&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;C.MANAGEMENTPLAN,&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;G.MANAGEMENTYPE,&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;C.MANAGEMENTREMARKS, &lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;C.HUMANANDENVIRONMENTALRELEVANCE,&lt;br/&gt;&#160; R.PROTECTIONLEGALSTATUS,&lt;br/&gt;&#160; B.GEOENTITY,&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;C.ACTIONS,&lt;br/&gt;&#160; O.OBJECTIVES,&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;E.NOMBRE AS PROVINCIA, &lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;S.NOMBRE AS CCAA&lt;br/&gt;FROM &lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;TESP_MANAGEMENTANDCONSERVATION C&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;INNER JOIN TESP_PLINIANCORE_EXTENSION P ON&#160; C.TAXONRECORDID = P.TAXONRECORDID&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;INNER JOIN TESP_TAXON T ON P.TAXONRECORDID = T.TAXONRECORDID&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;INNER JOIN TESP_TAXON_COLECCIONES M ON M.TAXONID= T.TAXONID&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;INNER JOIN TESP_LEGISLATION_TAXON L ON L.TAXONRECORDID = P.TAXONRECORDID&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;INNER JOIN TESP_LEGIS_PROTECTLEGALSTATUS R ON R.IDPROTECTIONLEGALSTATUS = L.IDPROTECTIONLEGALSTATUS&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;LEFT JOIN TESP_MANAGTYPE_MEDCONSERVACION G ON C.IDMANAGEMENTANDCONSERTYPE = G.IDMANAGEANDCONSERVTYPE&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;LEFT JOIN T_NUTS3_ES E ON&#160; C.ID_NUT_3 = E.ID_NUT3&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;LEFT JOIN T_NUTS2_ES_COMPETENCIAS S ON&#160; C.ID_NUT_2 = S.ID_NUT2&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;LEFT JOIN TESP_T_MANAG_OBJECTIVES O ON O.IDOBJECTIVES = C.IDOBJECTIVES&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;LEFT JOIN TESP_T_REGBIOG B ON B.ID = C.ID_REG_BIO&lt;br/&gt;&#160; &lt;br/&gt;WHERE M.IDCOLECCION = 12&lt;br/&gt;&#160;&#160;&#160; AND &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; (L.IDPROTECTIONLEGALSTATUS = 23 &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; OR&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160; L.IDPROTECTIONLEGALSTATUS = 24 &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; OR&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160; L.IDPROTECTIONLEGALSTATUS = 169 &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; OR&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160; L.IDPROTECTIONLEGALSTATUS = 170 &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; OR&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160; L.IDPROTECTIONLEGALSTATUS = 177 &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; OR&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160; L.IDPROTECTIONLEGALSTATUS = 178 &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; OR&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160; L.IDPROTECTIONLEGALSTATUS = 181 &lt;br/&gt;&#160;&#160;&#160;&#160;&#160; OR&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160; L.IDPROTECTIONLEGALSTATUS = 182 &lt;br/&gt;&#160;&#160;&#160; )&lt;br/&gt;&nbsp;&nbsp;&nbsp;&nbsp;ORDER BY T.scientificName;&lt;br/&gt;&lt;p/&gt;</div>
+
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

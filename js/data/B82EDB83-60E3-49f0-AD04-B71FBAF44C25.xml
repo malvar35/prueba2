@@ -1,0 +1,7 @@
+tocTab[tocTab.length] = new Array("0.1.1", "1", "1.ECOSISTEMAS", "EARoot/EA1/EA1/EA14.htm", "4.png", "", "", "{5137736A-08A9-4221-A0C6-BEE3166DC7FD}", "Package");
+tocTab[tocTab.length] = new Array("0.1.2", "1", "2.FAUNA Y FLORA", "EARoot/EA1/EA2/EA118.htm", "4.png", "", "", "{C007C156-C3F1-45bf-8F9E-7803F7DC3DA6}", "Package");
+tocTab[tocTab.length] = new Array("0.1.3", "1", "3.RECURSOS GENÉTICOS", "EARoot/EA1/EA3/EA198.htm", "4.png", "", "", "{E7F55B6C-BEB5-4874-91F7-B7EBCC2B3AED}", "Package");
+tocTab[tocTab.length] = new Array("0.1.4", "1", "4.RECURSOS NATURALES", "EARoot/EA1/EA4/EA368.htm", "4.png", "", "", "{5BE4F3BB-6A4E-46af-8CE9-6496643CEDFC}", "Package");
+tocTab[tocTab.length] = new Array("0.1.5", "1", "5.ESPACIOS PROTEGIDOS Y/O DE INTERÉS", "EARoot/EA1/EA5/EA676.htm", "4.png", "", "", "{BA63BDA1-790C-46e4-BAA8-246F7A613CE0}", "Package");
+tocTab[tocTab.length] = new Array("0.1.6", "1", "6.EFECTOS NEGATIVOS SOBRE EL PATRIMONIO NATURAL Y LA BIODIVERSIDAD", "EARoot/EA1/EA6/EA912.htm", "4.png", "", "", "{657D53D8-7278-4f3e-9FFD-8C9184A8CEA1}", "Package");
+tocTab[tocTab.length] = new Array("0.1.7", "1", "7.RECURSOS COMPLEMENTARIOS", "EARoot/EA1/EA7/EA1215.htm", "4.png", "", "", "{198177EB-BD2C-4cc1-B1A6-4467495FC949}", "Package");
